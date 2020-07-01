@@ -62,7 +62,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         if let primeiroViewController = Paginas.first {
             ordemPaginas(primeiroViewController)
         }
-        
+        acessibilityComponents()
         self.view.addSubview(pageControl)
         self.view.addSubview(buttonProximo)
         self.view.addSubview(buttonAnterior)
@@ -144,6 +144,18 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         }
         
         return Paginas[nextIndex]
+    }
+    
+    func acessibilityComponents(){
+        buttonPular.accessibilityLabel = "De um clique caso queira pular tutorial"
+        
+        buttonProximo.accessibilityLabel = "De um clique caso queira passar para a proxima explicação"
+        
+        buttonAnterior.accessibilityLabel = "De um clique caso queira voltar para a explicação anterior"
+        
+        pageControl.accessibilityLabel = "Marcador de paginas"
+        pageControl.accessibilityHint = "Page Control"
+        
     }
 
 }

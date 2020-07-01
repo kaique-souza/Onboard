@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="imageScroll" destination="mwV-T2-eYw" id="isn-w9-Nyt"/>
                 <outlet property="labelDescricaoScroll" destination="BIa-Cm-XQr" id="s0l-eT-r8X"/>
+                <outlet property="labelTitulo" destination="QrI-JG-BYJ" id="UZE-Sg-Jep"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,7 +24,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scroll" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QrI-JG-BYJ">
-                    <rect key="frame" x="82" y="73" width="157" height="30"/>
+                    <rect key="frame" x="82" y="79" width="157" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
                     <nil key="highlightedColor"/>

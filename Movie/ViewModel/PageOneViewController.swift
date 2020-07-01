@@ -13,11 +13,13 @@ class PageOneViewController: UIViewController {
     // MARK: - Atributos
     
     // MARK: - Outlets
+    @IBOutlet weak var labelTitulo: UILabel!
     @IBOutlet weak var imagemSearch: UIImageView!
     @IBOutlet weak var labelDescricaoSearch: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        acessibilityComponentes()
         configuraLabelDescricao()
         animateImage()
         ConfiguraImagem()
@@ -51,6 +53,18 @@ class PageOneViewController: UIViewController {
         chacoalhar.toValue = posicaoFinal
         imagemSearch.layer.add(chacoalhar, forKey: nil)
 
+    }
+    
+    func acessibilityComponentes(){
+        labelTitulo.accessibilityLabel = "Titulo do tutorial barra de status"
+        labelTitulo.accessibilityHint = "Texto estatico"
+        
+        imagemSearch.accessibilityLabel = "Imagem de exemplo, contendo o campo de pesquisa"
+        imagemSearch.accessibilityHint = "Imagem"
+        imagemSearch.isAccessibilityElement = true
+        
+        labelDescricaoSearch.accessibilityHint = "Texto estatico"
+        labelDescricaoSearch.accessibilityLabel = labelDescricaoSearch.text
     }
 }
 

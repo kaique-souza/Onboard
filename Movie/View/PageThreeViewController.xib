@@ -12,6 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PageThreeViewController" customModule="Movie" customModuleProvider="target">
             <connections>
+                <outlet property="imagemDetalhe" destination="poX-cZ-ubO" id="ZoS-Uq-pP6"/>
+                <outlet property="labelDescricaoDetalhe" destination="XJS-6Y-mcM" id="bMQ-WE-abG"/>
+                <outlet property="labelTitulo" destination="ZO4-nm-XZK" id="ScR-eu-Kft"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,19 +24,19 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Detalhes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZO4-nm-XZK">
-                    <rect key="frame" x="83" y="104" width="157" height="30"/>
+                    <rect key="frame" x="83" y="73" width="157" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Para visualizar mais detalhes sobre o filme, basta clicar em qualquer item da lista." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJS-6Y-mcM">
-                    <rect key="frame" x="16" y="432" width="290" height="29"/>
+                    <rect key="frame" x="16" y="426" width="290" height="29"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Captura de Tela 2020-07-01 às 2.55.27 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="poX-cZ-ubO">
-                    <rect key="frame" x="16" y="133" width="290" height="291"/>
+                    <rect key="frame" x="16" y="102" width="290" height="316"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </subviews>
