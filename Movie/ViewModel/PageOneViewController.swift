@@ -17,6 +17,7 @@ class PageOneViewController: UIViewController {
     @IBOutlet weak var imagemSearch: UIImageView!
     @IBOutlet weak var labelDescricaoSearch: UILabel!
     
+    // MARK: - life of cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         acessibilityComponentes()
@@ -30,6 +31,7 @@ class PageOneViewController: UIViewController {
         
     }
     
+    // MARK: - Metodos
     func ConfiguraImagem(){
         imagemSearch.layer.cornerRadius = 10
         imagemSearch.layer.masksToBounds = true

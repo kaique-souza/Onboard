@@ -9,11 +9,13 @@
 import UIKit
 
 class PageTwoViewController: UIViewController {
-
+    
+    // MARK: - Outlets
     @IBOutlet weak var imageScroll: UIImageView!
     @IBOutlet weak var labelDescricaoScroll: UILabel!
     @IBOutlet weak var labelTitulo: UILabel!
     
+    // MARK: - life of cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         acessibilityComponents()
@@ -27,6 +29,7 @@ class PageTwoViewController: UIViewController {
         
     }
     
+    // MARK: - Metodos
     func configuraImagem(){
         imageScroll.layer.cornerRadius = 10
         imageScroll.layer.masksToBounds =  true

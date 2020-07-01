@@ -9,11 +9,13 @@
 import UIKit
 
 class PageThreeViewController: UIViewController {
-
+    
+    // AMRK: - Outlets
     @IBOutlet weak var labelDescricaoDetalhe: UILabel!
     @IBOutlet weak var imagemDetalhe: UIImageView!
     @IBOutlet weak var labelTitulo: UILabel!
     
+    // MARK: - life of cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         acessibilityComponets()
@@ -27,6 +29,7 @@ class PageThreeViewController: UIViewController {
         
     }
     
+    // MARK: - Metodos
     func configuraLabelDescricao(){
         labelDescricaoDetalhe.sizeToFit()
     }

@@ -24,9 +24,15 @@
 		6BAB03B524ACA3BF003F0112 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BAB03B324ACA3BF003F0112 /* HomeViewController.xib */; };
 		6BC8AC0524ACFEDE00FE9245 /* Captura de Tela 2020-07-01 às 2.24.37 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC8AC0424ACFEDE00FE9245 /* Captura de Tela 2020-07-01 às 2.24.37 PM.png */; };
 		6BC8AC0724AD061A00FE9245 /* Captura de Tela 2020-07-01 às 2.55.27 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BC8AC0624AD061A00FE9245 /* Captura de Tela 2020-07-01 às 2.55.27 PM.png */; };
+		6BC8AC0B24AD28B400FE9245 /* SourceCodePro-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BC8AC0924AD286C00FE9245 /* SourceCodePro-Black.ttf */; };
+		6BC8AC0C24AD28B700FE9245 /* SourceCodePro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BC8AC0A24AD288300FE9245 /* SourceCodePro-Bold.ttf */; };
+		6BC8AC0F24AD2C1800FE9245 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BC8AC0E24AD2C1500FE9245 /* Roboto-Bold.ttf */; };
+		6BC8AC1024AD2C1C00FE9245 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BC8AC0D24AD2C0C00FE9245 /* Roboto-Black.ttf */; };
+		7A5B8EEA98310F26A7A1C0D7 /* Pods_Movie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54E22DC2E185BDA9D5C8E427 /* Pods_Movie.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		54E22DC2E185BDA9D5C8E427 /* Pods_Movie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Movie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B1BCFB524AB84600057D294 /* Movie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B1BCFB824AB84600057D294 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B1BCFBD24AB84600057D294 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -46,6 +52,12 @@
 		6BAB03B324ACA3BF003F0112 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		6BC8AC0424ACFEDE00FE9245 /* Captura de Tela 2020-07-01 às 2.24.37 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Captura de Tela 2020-07-01 às 2.24.37 PM.png"; sourceTree = "<group>"; };
 		6BC8AC0624AD061A00FE9245 /* Captura de Tela 2020-07-01 às 2.55.27 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Captura de Tela 2020-07-01 às 2.55.27 PM.png"; sourceTree = "<group>"; };
+		6BC8AC0924AD286C00FE9245 /* SourceCodePro-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceCodePro-Black.ttf"; sourceTree = "<group>"; };
+		6BC8AC0A24AD288300FE9245 /* SourceCodePro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceCodePro-Bold.ttf"; sourceTree = "<group>"; };
+		6BC8AC0D24AD2C0C00FE9245 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		6BC8AC0E24AD2C1500FE9245 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		83020E16DEB8973202233455 /* Pods-Movie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movie.release.xcconfig"; path = "Target Support Files/Pods-Movie/Pods-Movie.release.xcconfig"; sourceTree = "<group>"; };
+		CBF773C4CD8543FA91BB781C /* Pods-Movie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movie.debug.xcconfig"; path = "Target Support Files/Pods-Movie/Pods-Movie.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,17 +65,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A5B8EEA98310F26A7A1C0D7 /* Pods_Movie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		278A857870FE1D62FDF06CBD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				54E22DC2E185BDA9D5C8E427 /* Pods_Movie.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		27A52D235081792E0D6023C6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CBF773C4CD8543FA91BB781C /* Pods-Movie.debug.xcconfig */,
+				83020E16DEB8973202233455 /* Pods-Movie.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		6B1BCFAC24AB84600057D294 = {
 			isa = PBXGroup;
 			children = (
 				6B1BCFB724AB84600057D294 /* Movie */,
 				6B1BCFB624AB84600057D294 /* Products */,
+				27A52D235081792E0D6023C6 /* Pods */,
+				278A857870FE1D62FDF06CBD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +114,7 @@
 				6BAB03B124AC8C48003F0112 /* ViewModel */,
 				6BAB03B024AC8C1F003F0112 /* View */,
 				6B56F30924ACDBE500A17C8E /* Assets */,
+				6BC8AC0824AD284D00FE9245 /* Fonts */,
 				6B1BCFBC24AB84600057D294 /* Main.storyboard */,
 				6B1BCFC224AB84610057D294 /* Assets.xcassets */,
 				6B1BCFC424AB84610057D294 /* LaunchScreen.storyboard */,
@@ -124,6 +157,17 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		6BC8AC0824AD284D00FE9245 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6BC8AC0E24AD2C1500FE9245 /* Roboto-Bold.ttf */,
+				6BC8AC0D24AD2C0C00FE9245 /* Roboto-Black.ttf */,
+				6BC8AC0924AD286C00FE9245 /* SourceCodePro-Black.ttf */,
+				6BC8AC0A24AD288300FE9245 /* SourceCodePro-Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,6 +175,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6B1BCFCA24AB84610057D294 /* Build configuration list for PBXNativeTarget "Movie" */;
 			buildPhases = (
+				3DBA007FECA2CCD56653C0D5 /* [CP] Check Pods Manifest.lock */,
 				6B1BCFB124AB84600057D294 /* Sources */,
 				6B1BCFB224AB84600057D294 /* Frameworks */,
 				6B1BCFB324AB84600057D294 /* Resources */,
@@ -183,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B1BCFC624AB84610057D294 /* LaunchScreen.storyboard in Resources */,
+				6BC8AC0F24AD2C1800FE9245 /* Roboto-Bold.ttf in Resources */,
 				6BC8AC0724AD061A00FE9245 /* Captura de Tela 2020-07-01 às 2.55.27 PM.png in Resources */,
 				6BAB03AB24ABA7CA003F0112 /* PageTwoViewController.xib in Resources */,
 				6BC8AC0524ACFEDE00FE9245 /* Captura de Tela 2020-07-01 às 2.24.37 PM.png in Resources */,
@@ -191,11 +237,39 @@
 				6B56F30B24ACDD8100A17C8E /* Captura de Tela 2020-07-01 às 11.54.05 AM.png in Resources */,
 				6B1BCFBE24AB84600057D294 /* Main.storyboard in Resources */,
 				6BAB03B524ACA3BF003F0112 /* HomeViewController.xib in Resources */,
+				6BC8AC0C24AD28B700FE9245 /* SourceCodePro-Bold.ttf in Resources */,
+				6BC8AC1024AD2C1C00FE9245 /* Roboto-Black.ttf in Resources */,
 				6BAB03A724ABA7AC003F0112 /* PageOneViewController.xib in Resources */,
+				6BC8AC0B24AD28B400FE9245 /* SourceCodePro-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3DBA007FECA2CCD56653C0D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Movie-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6B1BCFB124AB84600057D294 /* Sources */ = {
@@ -352,6 +426,7 @@
 		};
 		6B1BCFCB24AB84610057D294 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBF773C4CD8543FA91BB781C /* Pods-Movie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -369,6 +444,7 @@
 		};
 		6B1BCFCC24AB84610057D294 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83020E16DEB8973202233455 /* Pods-Movie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

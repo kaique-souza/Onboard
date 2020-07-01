@@ -30,9 +30,10 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
     }()
     
     lazy var buttonProximo: UIButton = {
-        let buttonProximo = UIButton(frame: CGRect(x: 220, y: 500, width: 70, height: 30))
+        let buttonProximo = UIButton(frame: CGRect(x: 220, y: 500, width: 75, height: 30))
         buttonProximo.setTitle("Proximo", for: .normal)
         buttonProximo.setTitleColor(UIColor.black, for: .normal)
+        buttonProximo.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 19)
         buttonProximo.addTarget(self, action: #selector(actionbuttonProximo), for: .touchUpInside)
         return buttonProximo
     }()
@@ -41,6 +42,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         let buttonAnterior = UIButton(frame: CGRect(x: 20, y: 500, width: 70, height: 30))
         buttonAnterior.setTitle("Anterior", for: .normal)
         buttonAnterior.setTitleColor(UIColor.black, for: .normal)
+        buttonAnterior.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 19)
         buttonAnterior.addTarget(self, action: #selector(actionButtonAnterior), for: .touchUpInside)
         return buttonAnterior
     }()
@@ -48,6 +50,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
     lazy var buttonPular: UIButton = {
         let buttonPular = UIButton(frame: CGRect(x: 220, y: 50, width: 80, height: 30))
         buttonPular.setTitle("Pular", for: .normal)
+        buttonPular.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 19)
         buttonPular.setTitleColor(UIColor.black, for: .normal)
         buttonPular.addTarget(self, action: #selector(actionButtonPular), for: .touchUpInside)
         return buttonPular
