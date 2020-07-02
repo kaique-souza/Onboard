@@ -37,15 +37,15 @@
                         <constraint firstAttribute="width" secondItem="mwV-T2-eYw" secondAttribute="height" multiplier="207:182" id="LCa-PO-24R"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para visualizar mais filmes, basta deslizar a tela para cima, dessa forma ira obter mais titulos." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIa-Cm-XQr">
-                    <rect key="frame" x="20" y="463" width="374" height="67"/>
-                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="19"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para visualizar mais filmes, basta deslizar a tela para cima, dessa forma ira obter mais titulos." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIa-Cm-XQr">
+                    <rect key="frame" x="20" y="462.5" width="374" height="74"/>
+                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="21"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scroll" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QrI-JG-BYJ">
-                    <rect key="frame" x="179.5" y="418" width="55" height="25"/>
-                    <fontDescription key="fontDescription" name="Roboto-Black" family="Roboto" pointSize="21"/>
+                    <rect key="frame" x="174.5" y="418" width="65.5" height="29.5"/>
+                    <fontDescription key="fontDescription" name="Roboto-Black" family="Roboto" pointSize="25"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -58,7 +58,7 @@
                 <constraint firstItem="mwV-T2-eYw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="D69-Ff-2Re"/>
                 <constraint firstItem="QrI-JG-BYJ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="IvS-2b-mJf"/>
                 <constraint firstItem="mwV-T2-eYw" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="L3C-pj-fCH"/>
-                <constraint firstItem="BIa-Cm-XQr" firstAttribute="top" secondItem="QrI-JG-BYJ" secondAttribute="bottom" constant="20" id="bV9-aG-6g6"/>
+                <constraint firstItem="BIa-Cm-XQr" firstAttribute="top" secondItem="QrI-JG-BYJ" secondAttribute="bottom" constant="15" id="bV9-aG-6g6"/>
                 <constraint firstItem="mwV-T2-eYw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="sAo-eM-xMq"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

@@ -33,7 +33,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         let buttonProximo = UIButton()
         buttonProximo.setTitle("Proximo", for: .normal)
         buttonProximo.setTitleColor(UIColor.white, for: .normal)
-        buttonProximo.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 17)
+        buttonProximo.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 19)
         buttonProximo.addTarget(self, action: #selector(actionbuttonProximo), for: .touchUpInside)
         return buttonProximo
     }()
@@ -42,7 +42,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         let buttonAnterior = UIButton()
         buttonAnterior.setTitle("Anterior", for: .normal)
         buttonAnterior.setTitleColor(UIColor.white, for: .normal)
-        buttonAnterior.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 17)
+        buttonAnterior.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 19)
         buttonAnterior.addTarget(self, action: #selector(actionButtonAnterior), for: .touchUpInside)
         return buttonAnterior
     }()
@@ -50,7 +50,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
     lazy var buttonPular: UIButton = {
         let buttonPular = UIButton(frame: CGRect(x: 220, y: 50, width: 80, height: 30))
         buttonPular.setTitle("Pular", for: .normal)
-        buttonPular.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 17)
+        buttonPular.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 19)
         buttonPular.setTitleColor(UIColor.white, for: .normal)
         buttonPular.addTarget(self, action: #selector(actionButtonPular), for: .touchUpInside)
         return buttonPular
@@ -59,7 +59,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
     lazy var buttonIniciar: UIButton = {
         let buttonInicar = UIButton()
         buttonInicar.setTitle("Iniciar", for: .normal)
-        buttonInicar.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 17)
+        buttonInicar.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 19)
         buttonInicar.setTitleColor(UIColor.white, for: .normal)
         buttonInicar.addTarget(self, action: #selector(iniciarApp), for: .touchUpInside)
        return buttonInicar
@@ -91,20 +91,25 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
     
     func configuraPageControl(){
         self.view.addSubview(pageControl)
-        pageControl.frame = CGRect(x: 0,y: UIScreen.main.bounds.maxY - 200,width: UIScreen.main.bounds.width,height: 50)
+        pageControl.translatesAutoresizingMaskIntoConstraints = false
+        
         pageControl.numberOfPages = Paginas.count
-        let bottom = pageControl.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -(50 + bottomSafeAreaHeight))
-        let centerX = pageControl.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
-//        let height = pageControl.heightAnchor.constraint(equalToConstant: 10)
-//        let width = pageControl.widthAnchor.constraint(equalToConstant: 200)
-        NSLayoutConstraint.activate([bottom, centerX])
+        let bottom = NSLayoutConstraint(item: pageControl, attribute: .bottom, relatedBy: .equal, toItem: self.view, attribute: .bottom, multiplier: 1, constant: -(120 + bottomSafeAreaHeight))
+        
+        let centerX = NSLayoutConstraint(item: pageControl, attribute: .centerX, relatedBy: .equal, toItem: self.view, attribute: .centerX, multiplier: 1, constant: 0)
+        
+        let height = NSLayoutConstraint(item: pageControl, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 30)
+        
+        let width = NSLayoutConstraint(item: pageControl, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 150)
+        
+        NSLayoutConstraint.activate([bottom, centerX, height, width])
     }
     
     func configuraButtonProximo(){
         self.view.addSubview(buttonProximo)
         buttonProximo.translatesAutoresizingMaskIntoConstraints = false
         
-        let bottom = NSLayoutConstraint(item: buttonProximo, attribute: .bottom, relatedBy: .equal, toItem: self.view, attribute: .bottom, multiplier: 1.0, constant: -(36 + bottomSafeAreaHeight))
+        let bottom = NSLayoutConstraint(item: buttonProximo, attribute: .bottom, relatedBy: .equal, toItem: self.view, attribute: .bottom, multiplier: 1.0, constant: -(30 + bottomSafeAreaHeight))
         
         let rigth = NSLayoutConstraint(item: buttonProximo, attribute: .rightMargin, relatedBy: .equal, toItem: self.view, attribute: .rightMargin, multiplier: 1, constant: -20)
 
@@ -118,7 +123,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         self.view.addSubview(buttonAnterior)
         buttonAnterior.translatesAutoresizingMaskIntoConstraints = false
         
-        let bottom = NSLayoutConstraint(item: buttonAnterior, attribute: .bottom, relatedBy: .equal, toItem: self.view, attribute: .bottom, multiplier: 1.0, constant: -(36 + bottomSafeAreaHeight))
+        let bottom = NSLayoutConstraint(item: buttonAnterior, attribute: .bottom, relatedBy: .equal, toItem: self.view, attribute: .bottom, multiplier: 1.0, constant: -(30 + bottomSafeAreaHeight))
         
         let left = NSLayoutConstraint(item: buttonAnterior, attribute: .leftMargin, relatedBy: .equal, toItem: self.view, attribute: .leftMargin, multiplier: 1, constant: 20)
         

@@ -13,6 +13,9 @@
         <array key="Roboto-Black.ttf">
             <string>Roboto-Black</string>
         </array>
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PageOneViewController" customModule="Movie" customModuleProvider="target">
@@ -35,14 +38,14 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Barra de pesquisa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAv-ff-ZUn">
-                    <rect key="frame" x="121.5" y="423" width="171.5" height="25"/>
-                    <fontDescription key="fontDescription" name="Roboto-Black" family="Roboto" pointSize="21"/>
+                    <rect key="frame" x="105.5" y="423" width="203" height="29.5"/>
+                    <fontDescription key="fontDescription" name="Roboto-Black" family="Roboto" pointSize="25"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para realizar pesquisas dos seus filmes favoritos com mais facilidade, insira o titulo do filme na barra de busca e pronto." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFn-Id-WSe">
-                    <rect key="frame" x="20" y="468" width="374" height="68.5"/>
-                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="19"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para realizar pesquisas dos seus filmes favoritos com mais facilidade, insira o titulo do filme na barra de busca e pronto." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFn-Id-WSe">
+                    <rect key="frame" x="20" y="467.5" width="374" height="98.5"/>
+                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="21"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -53,7 +56,7 @@
                 <constraint firstItem="BVI-Br-t9B" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="IGb-S7-mKJ"/>
                 <constraint firstItem="BVI-Br-t9B" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="NRH-nd-Rf9"/>
                 <constraint firstItem="vAv-ff-ZUn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bl9-at-RMG"/>
-                <constraint firstItem="qFn-Id-WSe" firstAttribute="top" secondItem="vAv-ff-ZUn" secondAttribute="bottom" constant="20" id="liZ-z8-eiD"/>
+                <constraint firstItem="qFn-Id-WSe" firstAttribute="top" secondItem="vAv-ff-ZUn" secondAttribute="bottom" constant="15" id="liZ-z8-eiD"/>
                 <constraint firstItem="vAv-ff-ZUn" firstAttribute="top" secondItem="BVI-Br-t9B" secondAttribute="bottom" constant="15" id="nXi-dU-pGb"/>
                 <constraint firstItem="qFn-Id-WSe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="z3w-cW-bSQ"/>
                 <constraint firstItem="BVI-Br-t9B" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="zhx-Zj-3dy"/>

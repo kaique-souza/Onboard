@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Roboto-Black.ttf">
+            <string>Roboto-Black</string>
+        </array>
         <array key="Roboto-Bold.ttf">
             <string>Roboto-Bold</string>
         </array>
@@ -29,8 +32,8 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detalhes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZO4-nm-XZK">
-                    <rect key="frame" x="173.5" y="418" width="67.5" height="20"/>
-                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
+                    <rect key="frame" x="157.5" y="418" width="99.5" height="29.5"/>
+                    <fontDescription key="fontDescription" name="Roboto-Black" family="Roboto" pointSize="25"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -40,9 +43,9 @@
                         <constraint firstAttribute="width" secondItem="poX-cZ-ubO" secondAttribute="height" multiplier="207:182" id="yx8-dO-og6"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para visualizar mais detalhes sobre o filme, basta clicar em qualquer item da lista." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJS-6Y-mcM">
-                    <rect key="frame" x="20" y="448" width="374" height="45"/>
-                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="19"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para visualizar mais detalhes sobre o filme, basta clicar em qualquer item da lista." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJS-6Y-mcM">
+                    <rect key="frame" x="20" y="462.5" width="374" height="74"/>
+                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="21"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -55,7 +58,7 @@
                 <constraint firstItem="ZO4-nm-XZK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="AlQ-v7-mvS"/>
                 <constraint firstItem="XJS-6Y-mcM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Q8v-fq-tyP"/>
                 <constraint firstItem="poX-cZ-ubO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Qp7-R2-O2p"/>
-                <constraint firstItem="XJS-6Y-mcM" firstAttribute="top" secondItem="ZO4-nm-XZK" secondAttribute="bottom" constant="10" id="cdV-mw-Ijg"/>
+                <constraint firstItem="XJS-6Y-mcM" firstAttribute="top" secondItem="ZO4-nm-XZK" secondAttribute="bottom" constant="15" id="cdV-mw-Ijg"/>
                 <constraint firstItem="poX-cZ-ubO" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="giP-kn-G71"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
