@@ -25,14 +25,14 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         pageControl.currentPage = 0
         pageControl.tintColor = UIColor.black
         pageControl.pageIndicatorTintColor = UIColor.white
-        pageControl.currentPageIndicatorTintColor = UIColor.black
+        pageControl.currentPageIndicatorTintColor = UIColor.red
         return pageControl
     }()
     
     lazy var buttonProximo: UIButton = {
         let buttonProximo = UIButton()
         buttonProximo.setTitle("Proximo", for: .normal)
-        buttonProximo.setTitleColor(UIColor.white, for: .normal)
+        buttonProximo.setTitleColor(UIColor.red, for: .normal)
         buttonProximo.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 19)
         buttonProximo.addTarget(self, action: #selector(actionbuttonProximo), for: .touchUpInside)
         return buttonProximo
@@ -41,7 +41,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
     lazy var buttonAnterior: UIButton = {
         let buttonAnterior = UIButton()
         buttonAnterior.setTitle("Anterior", for: .normal)
-        buttonAnterior.setTitleColor(UIColor.white, for: .normal)
+        buttonAnterior.setTitleColor(UIColor.red, for: .normal)
         buttonAnterior.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 19)
         buttonAnterior.addTarget(self, action: #selector(actionButtonAnterior), for: .touchUpInside)
         return buttonAnterior
@@ -49,20 +49,22 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
     
     lazy var buttonPular: UIButton = {
         let buttonPular = UIButton(frame: CGRect(x: 220, y: 50, width: 80, height: 30))
+        buttonPular.isHidden = true
         buttonPular.setTitle("Pular", for: .normal)
         buttonPular.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 19)
-        buttonPular.setTitleColor(UIColor.white, for: .normal)
+        buttonPular.setTitleColor(UIColor.red, for: .normal)
         buttonPular.addTarget(self, action: #selector(actionButtonPular), for: .touchUpInside)
         return buttonPular
     }()
     
     lazy var buttonIniciar: UIButton = {
-        let buttonInicar = UIButton()
-        buttonInicar.setTitle("Iniciar", for: .normal)
-        buttonInicar.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 19)
-        buttonInicar.setTitleColor(UIColor.white, for: .normal)
-        buttonInicar.addTarget(self, action: #selector(iniciarApp), for: .touchUpInside)
-       return buttonInicar
+        let buttonIniciar = UIButton()
+        buttonIniciar.backgroundColor = UIColor.red
+        buttonIniciar.setTitle("Iniciar", for: .normal)
+        buttonIniciar.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 19)
+        buttonIniciar.setTitleColor(UIColor.white, for: .normal)
+        buttonIniciar.addTarget(self, action: #selector(iniciarApp), for: .touchUpInside)
+       return buttonIniciar
     }()
 
     // MARK: - life of cycle
@@ -78,6 +80,8 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         configuraPageControl()
         configuraButtonProximo()
         configureButtonAnterior()
+        configuraButtonIniciar()
+        VisualizacaoButtons(Iniciar: false)
         self.view.addSubview(buttonPular)
     }
     
@@ -94,7 +98,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         pageControl.translatesAutoresizingMaskIntoConstraints = false
         
         pageControl.numberOfPages = Paginas.count
-        let bottom = NSLayoutConstraint(item: pageControl, attribute: .bottom, relatedBy: .equal, toItem: self.view, attribute: .bottom, multiplier: 1, constant: -(120 + bottomSafeAreaHeight))
+        let bottom = NSLayoutConstraint(item: pageControl, attribute: .bottom, relatedBy: .equal, toItem: self.view, attribute: .bottom, multiplier: 1, constant: -(100 + bottomSafeAreaHeight))
         
         let centerX = NSLayoutConstraint(item: pageControl, attribute: .centerX, relatedBy: .equal, toItem: self.view, attribute: .centerX, multiplier: 1, constant: 0)
         
@@ -139,12 +143,13 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         
         let bottom = NSLayoutConstraint(item: buttonIniciar, attribute: .bottom, relatedBy: .equal, toItem: self.view, attribute: .bottom, multiplier: 1.0, constant: -(36 + bottomSafeAreaHeight))
         
-        let left = NSLayoutConstraint(item: buttonAnterior, attribute: .centerY, relatedBy: .equal, toItem: self.view, attribute: .centerY, multiplier: 1, constant: 0)
+        let center = NSLayoutConstraint(item: buttonIniciar, attribute: .centerX, relatedBy: .equal, toItem: self.view, attribute: .centerX, multiplier: 1, constant: 0)
         
-        let width = NSLayoutConstraint(item: buttonAnterior, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 75)
+        let width = NSLayoutConstraint(item: buttonIniciar, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 200)
         
-        let height = NSLayoutConstraint(item: buttonAnterior, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 30)
-        NSLayoutConstraint.activate([bottom, width, height, left])
+        let height = NSLayoutConstraint(item: buttonIniciar, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 30)
+        
+        NSLayoutConstraint.activate([bottom, width, height, center])
     }
     
     @objc func iniciarApp(){
@@ -153,9 +158,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
     
     @objc func actionbuttonProximo(){
         if pageControl.currentPage == 2 {
-            buttonAnterior.removeFromSuperview()
-            buttonProximo.removeFromSuperview()
-            //configuraButtonIniciar()
+            VisualizacaoButtons(Iniciar: true)
         }else{
             pageControl.currentPage += 1
             ordemPaginas(Paginas[pageControl.currentPage])
@@ -174,10 +177,20 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
     @objc func actionButtonPular(){
         let quantidade = UserDefaults.standard.integer(forKey: "Primeiro_Acesso") + 1
         UserDefaults.standard.set(quantidade, forKey: "Primeiro_Acesso")
-        
-        print(UserDefaults.standard.integer(forKey: "Primeiro_Acesso"))
         let homeViewController =  HomeViewController()
         present(homeViewController, animated: true, completion: nil)
+    }
+    
+    func VisualizacaoButtons(Iniciar: Bool){
+        if Iniciar{
+            buttonProximo.isHidden = true
+            buttonAnterior.isHidden = true
+            buttonIniciar.isHidden = false
+        }else{
+            buttonProximo.isHidden = false
+            buttonAnterior.isHidden = false
+            buttonIniciar.isHidden = true
+        }
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {

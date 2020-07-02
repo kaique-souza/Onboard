@@ -21,10 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let storybord = UIStoryboard(name: "Main", bundle: nil)
         let controller = storybord.instantiateViewController(withIdentifier: "Page")
         
-//        if UserDefaults.standard.integer(forKey: "Primeiro_Acesso") > 2{
-//
-//            controller = storybord.instantiateViewController(withIdentifier: "Home")
-//        }
+        if UserDefaults.standard.integer(forKey: "Primeiro_Acesso") <= 2{
+//            let nib = UINib(nibName: "MyViewController", bundle:nil)
+//            myVC = nib.instantiateWithOwner(self, options: nil)[0] as? MyViewController
+        }
         
         window?.rootViewController =  controller
         window?.makeKeyAndVisible()
