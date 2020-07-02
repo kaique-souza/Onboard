@@ -21,9 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let storybord = UIStoryboard(name: "Main", bundle: nil)
         let controller = storybord.instantiateViewController(withIdentifier: "Page")
         
-        if UserDefaults.standard.integer(forKey: "Primeiro_Acesso") <= 2{
-//            let nib = UINib(nibName: "MyViewController", bundle:nil)
-//            myVC = nib.instantiateWithOwner(self, options: nil)[0] as? MyViewController
+        if UserDefaults.standard.integer(forKey: "Primeiro_Acesso") > 2{
+//            let nib = UINib(nibName: "HomeViewController", bundle:nil)
+//            let NibController = nib.instantiate(withOwner: self, options: nil)[0] as? HomeViewController
+//            guard let home = NibController else { return false}
+//            window?.rootViewController = home
+//            window?.makeKeyAndVisible()
         }
         
         window?.rootViewController =  controller
