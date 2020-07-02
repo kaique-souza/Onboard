@@ -33,6 +33,8 @@ class PageTwoViewController: UIViewController {
     func configuraImagem(){
         imageScroll.layer.cornerRadius = 10
         imageScroll.layer.masksToBounds =  true
+        imageScroll.layer.borderColor = UIColor.black.cgColor
+        imageScroll.layer.borderWidth = 1
     }
     
     func configuraLabelDescricao(){

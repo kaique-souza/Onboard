@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -25,29 +25,41 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" restorationIdentifier="PageThreeViewController" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Detalhes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZO4-nm-XZK">
-                    <rect key="frame" x="83" y="73" width="157" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detalhes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZO4-nm-XZK">
+                    <rect key="frame" x="173.5" y="418" width="67.5" height="20"/>
                     <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Para visualizar mais detalhes sobre o filme, basta clicar em qualquer item da lista." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJS-6Y-mcM">
-                    <rect key="frame" x="16" y="426" width="290" height="29"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Captura de Tela 2020-07-01 às 2.55.27 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="poX-cZ-ubO">
-                    <rect key="frame" x="16" y="102" width="290" height="316"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Captura de Tela 2020-07-01 às 2.55.27 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="poX-cZ-ubO">
+                    <rect key="frame" x="0.0" y="44" width="414" height="364"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="poX-cZ-ubO" secondAttribute="height" multiplier="207:182" id="yx8-dO-og6"/>
+                    </constraints>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para visualizar mais detalhes sobre o filme, basta clicar em qualquer item da lista." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJS-6Y-mcM">
+                    <rect key="frame" x="20" y="448" width="374" height="45"/>
+                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="19"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
-            <color key="backgroundColor" red="0.96862745100000003" green="0.68235294120000001" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XJS-6Y-mcM" secondAttribute="trailing" constant="20" id="0Bj-nZ-BeM"/>
+                <constraint firstItem="ZO4-nm-XZK" firstAttribute="top" secondItem="poX-cZ-ubO" secondAttribute="bottom" constant="10" id="7UX-3C-yzC"/>
+                <constraint firstItem="poX-cZ-ubO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="8Nt-im-vqr"/>
+                <constraint firstItem="ZO4-nm-XZK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="AlQ-v7-mvS"/>
+                <constraint firstItem="XJS-6Y-mcM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Q8v-fq-tyP"/>
+                <constraint firstItem="poX-cZ-ubO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Qp7-R2-O2p"/>
+                <constraint firstItem="XJS-6Y-mcM" firstAttribute="top" secondItem="ZO4-nm-XZK" secondAttribute="bottom" constant="10" id="cdV-mw-Ijg"/>
+                <constraint firstItem="poX-cZ-ubO" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="giP-kn-G71"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="63.75" y="87.676056338028175"/>
+            <point key="canvasLocation" x="62.318840579710148" y="87.053571428571431"/>
         </view>
     </objects>
     <resources>

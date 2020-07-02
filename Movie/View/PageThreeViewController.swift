@@ -37,6 +37,7 @@ class PageThreeViewController: UIViewController {
     func configuraImagem(){
         imagemDetalhe.layer.cornerRadius = 10
         imagemDetalhe.layer.masksToBounds = true
+        imagemDetalhe.layer.borderColor = UIColor.black.cgColor
     }
     
     func acessibilityComponets(){

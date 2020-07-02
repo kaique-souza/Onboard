@@ -22,7 +22,6 @@ class PageOneViewController: UIViewController {
         super.viewDidLoad()
         acessibilityComponentes()
         configuraLabelDescricao()
-        animateImage()
         ConfiguraImagem()
     }
 
@@ -35,26 +34,12 @@ class PageOneViewController: UIViewController {
     func ConfiguraImagem(){
         imagemSearch.layer.cornerRadius = 10
         imagemSearch.layer.masksToBounds = true
+        imagemSearch.layer.borderColor = UIColor.black.cgColor
+        imagemSearch.layer.borderWidth = 1
     }
     
     func configuraLabelDescricao(){
         labelDescricaoSearch.sizeToFit()
-    }
-    
-    func animateImage(){
-        let chacoalhar = CABasicAnimation(keyPath: "position")
-        
-        chacoalhar.duration = 0.4
-        chacoalhar.repeatCount = 2
-        chacoalhar.autoreverses = true
-        
-        let posicaoInicial = CGPoint(x: imagemSearch.center.x, y: imagemSearch.center.y + 5)
-        chacoalhar.fromValue = posicaoInicial
-        
-        let posicaoFinal = CGPoint(x: imagemSearch.center.x, y: imagemSearch.center.y - 5)
-        chacoalhar.toValue = posicaoFinal
-        imagemSearch.layer.add(chacoalhar, forKey: nil)
-
     }
     
     func acessibilityComponentes(){

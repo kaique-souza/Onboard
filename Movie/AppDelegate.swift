@@ -17,9 +17,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-            print("helow mundo")
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let storybord = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storybord.instantiateViewController(withIdentifier: "Page")
+        
+//        if UserDefaults.standard.integer(forKey: "Primeiro_Acesso") > 2{
+//
+//            controller = storybord.instantiateViewController(withIdentifier: "Home")
+//        }
+        
+        window?.rootViewController =  controller
+        window?.makeKeyAndVisible()
+        
         return true
-            
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

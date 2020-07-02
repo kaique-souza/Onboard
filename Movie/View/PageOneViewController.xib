@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -10,8 +10,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Roboto-Bold.ttf">
-            <string>Roboto-Bold</string>
+        <array key="Roboto-Black.ttf">
+            <string>Roboto-Black</string>
         </array>
     </customFonts>
     <objects>
@@ -25,29 +25,41 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" restorationIdentifier="PageOneViewController" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Para realizar pesquisas dos seus filmes favoritos com mais facilidade, insira o titulo do filme na barra de busca e pronto." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFn-Id-WSe">
-                    <rect key="frame" x="16" y="371" width="290" height="29"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Captura de Tela 2020-07-01 às 11.54.05 AM.png" translatesAutoresizingMaskIntoConstraints="NO" id="BVI-Br-t9B">
+                    <rect key="frame" x="0.0" y="44" width="414" height="364"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="BVI-Br-t9B" secondAttribute="height" multiplier="207:182" id="CmE-Md-vS7"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Barra de pesquisa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAv-ff-ZUn">
+                    <rect key="frame" x="121.5" y="423" width="171.5" height="25"/>
+                    <fontDescription key="fontDescription" name="Roboto-Black" family="Roboto" pointSize="21"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Captura de Tela 2020-07-01 às 11.54.05 AM.png" translatesAutoresizingMaskIntoConstraints="NO" id="BVI-Br-t9B">
-                    <rect key="frame" x="16" y="123" width="290" height="240"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Barra de pesquisa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAv-ff-ZUn">
-                    <rect key="frame" x="69" y="89" width="184" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para realizar pesquisas dos seus filmes favoritos com mais facilidade, insira o titulo do filme na barra de busca e pronto." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFn-Id-WSe">
+                    <rect key="frame" x="20" y="468" width="374" height="68.5"/>
+                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="19"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="0.96862745100000003" green="0.68235294120000001" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="qFn-Id-WSe" secondAttribute="trailing" constant="20" id="3Dh-L4-Fup"/>
+                <constraint firstItem="BVI-Br-t9B" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="IGb-S7-mKJ"/>
+                <constraint firstItem="BVI-Br-t9B" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="NRH-nd-Rf9"/>
+                <constraint firstItem="vAv-ff-ZUn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bl9-at-RMG"/>
+                <constraint firstItem="qFn-Id-WSe" firstAttribute="top" secondItem="vAv-ff-ZUn" secondAttribute="bottom" constant="20" id="liZ-z8-eiD"/>
+                <constraint firstItem="vAv-ff-ZUn" firstAttribute="top" secondItem="BVI-Br-t9B" secondAttribute="bottom" constant="15" id="nXi-dU-pGb"/>
+                <constraint firstItem="qFn-Id-WSe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="z3w-cW-bSQ"/>
+                <constraint firstItem="BVI-Br-t9B" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="zhx-Zj-3dy"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="52.5" y="73.943661971830991"/>
+            <point key="canvasLocation" x="52.173913043478265" y="73.660714285714278"/>
         </view>
     </objects>
     <resources>

@@ -138,9 +138,13 @@
 			isa = PBXGroup;
 			children = (
 				6BAB03A524ABA7AC003F0112 /* PageOneViewController.xib */,
+				6BAB03A424ABA7AB003F0112 /* PageOneViewController.swift */,
 				6BAB03A924ABA7CA003F0112 /* PageTwoViewController.xib */,
+				6BAB03A824ABA7CA003F0112 /* PageTwoViewController.swift */,
 				6BAB03AD24ABA7E4003F0112 /* PageThreeViewController.xib */,
+				6BAB03AC24ABA7E4003F0112 /* PageThreeViewController.swift */,
 				6BAB03B324ACA3BF003F0112 /* HomeViewController.xib */,
+				6BAB03B224ACA3BF003F0112 /* HomeViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -149,10 +153,6 @@
 			isa = PBXGroup;
 			children = (
 				6BAB03A224ABA782003F0112 /* PageViewController.swift */,
-				6BAB03A424ABA7AB003F0112 /* PageOneViewController.swift */,
-				6BAB03A824ABA7CA003F0112 /* PageTwoViewController.swift */,
-				6BAB03AC24ABA7E4003F0112 /* PageThreeViewController.swift */,
-				6BAB03B224ACA3BF003F0112 /* HomeViewController.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";

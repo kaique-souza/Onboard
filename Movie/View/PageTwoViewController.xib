@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Roboto-Black.ttf">
+            <string>Roboto-Black</string>
+        </array>
         <array key="Roboto-Bold.ttf">
             <string>Roboto-Bold</string>
         </array>
@@ -25,28 +28,41 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" restorationIdentifier="PageTwoViewController" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scroll" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QrI-JG-BYJ">
-                    <rect key="frame" x="82" y="79" width="157" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Para visualizar mais filmes, basta deslizar a tela para cima, dessa forma ira obter mais titulos." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIa-Cm-XQr">
-                    <rect key="frame" x="15" y="381" width="290" height="29"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Captura de Tela 2020-07-01 às 11.54.05 AM.png" translatesAutoresizingMaskIntoConstraints="NO" id="mwV-T2-eYw">
-                    <rect key="frame" x="15" y="111" width="290" height="240"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Captura de Tela 2020-07-01 às 11.54.05 AM.png" translatesAutoresizingMaskIntoConstraints="NO" id="mwV-T2-eYw">
+                    <rect key="frame" x="0.0" y="44" width="414" height="364"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="mwV-T2-eYw" secondAttribute="height" multiplier="207:182" id="LCa-PO-24R"/>
+                    </constraints>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para visualizar mais filmes, basta deslizar a tela para cima, dessa forma ira obter mais titulos." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIa-Cm-XQr">
+                    <rect key="frame" x="20" y="463" width="374" height="67"/>
+                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="19"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scroll" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QrI-JG-BYJ">
+                    <rect key="frame" x="179.5" y="418" width="55" height="25"/>
+                    <fontDescription key="fontDescription" name="Roboto-Black" family="Roboto" pointSize="21"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
-            <color key="backgroundColor" red="0.96862745100000003" green="0.68235294120000001" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="BIa-Cm-XQr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="22N-XN-y2Y"/>
+                <constraint firstItem="QrI-JG-BYJ" firstAttribute="top" secondItem="mwV-T2-eYw" secondAttribute="bottom" constant="10" id="4B3-U5-kXz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BIa-Cm-XQr" secondAttribute="trailing" constant="20" id="CM1-9X-PGI"/>
+                <constraint firstItem="mwV-T2-eYw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="D69-Ff-2Re"/>
+                <constraint firstItem="QrI-JG-BYJ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="IvS-2b-mJf"/>
+                <constraint firstItem="mwV-T2-eYw" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="L3C-pj-fCH"/>
+                <constraint firstItem="BIa-Cm-XQr" firstAttribute="top" secondItem="QrI-JG-BYJ" secondAttribute="bottom" constant="20" id="bV9-aG-6g6"/>
+                <constraint firstItem="mwV-T2-eYw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="sAo-eM-xMq"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="62.318840579710148" y="79.6875"/>
         </view>
     </objects>
     <resources>
