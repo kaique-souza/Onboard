@@ -177,6 +177,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
     @objc func actionButtonPular(){
         let quantidade = UserDefaults.standard.integer(forKey: "Primeiro_Acesso") + 1
         UserDefaults.standard.set(quantidade, forKey: "Primeiro_Acesso")
+        print(UserDefaults.standard.integer(forKey: "Primeiro_Acesso"))
         let homeViewController =  HomeViewController()
         present(homeViewController, animated: true, completion: nil)
     }
