@@ -31,7 +31,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Captura de Tela 2020-07-01 às 11.54.05 AM.png" translatesAutoresizingMaskIntoConstraints="NO" id="mwV-T2-eYw">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Captura de Tela 2020-07-01 às 2.24.37 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="mwV-T2-eYw">
                     <rect key="frame" x="0.0" y="44" width="414" height="364"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="mwV-T2-eYw" secondAttribute="height" multiplier="207:182" id="LCa-PO-24R"/>
@@ -66,6 +66,6 @@
         </view>
     </objects>
     <resources>
-        <image name="Captura de Tela 2020-07-01 às 11.54.05 AM.png" width="578" height="553"/>
+        <image name="Captura de Tela 2020-07-01 às 2.24.37 PM.png" width="584" height="967"/>
     </resources>
 </document>
