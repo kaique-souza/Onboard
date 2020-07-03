@@ -48,8 +48,8 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
     }()
     
     lazy var buttonPular: UIButton = {
-        let buttonPular = UIButton(frame: CGRect(x: 220, y: 50, width: 80, height: 30))
-        buttonPular.isHidden = true
+        let buttonPular = UIButton()
+        //buttonPular.isHidden = true
         buttonPular.setTitle("Pular", for: .normal)
         buttonPular.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 19)
         buttonPular.setTitleColor(UIColor.red, for: .normal)
@@ -80,9 +80,10 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         configuraPageControl()
         configuraButtonProximo()
         configureButtonAnterior()
+        configuraButtonPular()
         configuraButtonIniciar()
         VisualizacaoButtons(Iniciar: false)
-        self.view.addSubview(buttonPular)
+        
     }
     
     // MARK: - Metodos
@@ -107,6 +108,21 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         let width = NSLayoutConstraint(item: pageControl, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 150)
         
         NSLayoutConstraint.activate([bottom, centerX, height, width])
+    }
+    
+    func configuraButtonPular(){
+        self.view.addSubview(buttonPular)
+        buttonPular.translatesAutoresizingMaskIntoConstraints = false
+        
+        let bottom = NSLayoutConstraint(item: buttonPular, attribute: .bottom, relatedBy: .equal, toItem: self.view, attribute: .bottom, multiplier: 1, constant: -46)
+        
+        let center = NSLayoutConstraint(item: buttonPular, attribute: .centerX, relatedBy: .equal, toItem: self.view, attribute: .centerX, multiplier: 1, constant: 0)
+        
+        let width = NSLayoutConstraint(item: buttonPular, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: 75)
+        
+        let height = NSLayoutConstraint(item: buttonPular, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 30)
+        
+        NSLayoutConstraint.activate([bottom, center, width,height])
     }
     
     func configuraButtonProximo(){
@@ -153,7 +169,11 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
     }
     
     @objc func iniciarApp(){
-        actionButtonPular()
+        let quantidade = UserDefaults.standard.integer(forKey: "Primeiro_Acesso") + 1
+        UserDefaults.standard.set(quantidade, forKey: "Primeiro_Acesso")
+        print(UserDefaults.standard.integer(forKey: "Primeiro_Acesso"))
+        let homeViewController =  HomeViewController()
+        present(homeViewController, animated: true, completion: nil)
     }
     
     @objc func actionbuttonProximo(){
@@ -175,11 +195,8 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
     }
     
     @objc func actionButtonPular(){
-        let quantidade = UserDefaults.standard.integer(forKey: "Primeiro_Acesso") + 1
-        UserDefaults.standard.set(quantidade, forKey: "Primeiro_Acesso")
-        print(UserDefaults.standard.integer(forKey: "Primeiro_Acesso"))
-        let homeViewController =  HomeViewController()
-        present(homeViewController, animated: true, completion: nil)
+        ordemPaginas(Paginas[2])
+        VisualizacaoButtons(Iniciar: true)
     }
     
     func VisualizacaoButtons(Iniciar: Bool){

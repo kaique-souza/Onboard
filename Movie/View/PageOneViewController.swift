@@ -37,7 +37,7 @@ class PageOneViewController: UIViewController {
         imagemSearch.layer.masksToBounds = true
         imagemSearch.layer.borderColor = UIColor.black.cgColor
         imagemSearch.layer.borderWidth = 1
-        print(modelIdentifier())
+    
     }
     
     func configuraLabelDescricao(){
