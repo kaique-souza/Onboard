@@ -241,15 +241,15 @@ extension PageViewController: UIPageViewControllerDelegate, UIPageViewController
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         
-        let pageContentViewController = pageViewController.viewControllers![0]
-        if paginas.firstIndex(of: pageContentViewController)! == 0 {
+        guard let pageContentViewController = pageViewController.viewControllers?[0] else { return }
+        
+        if paginas.firstIndex(of: pageContentViewController) == 0 {
             primeiraPagina()
-        } else if paginas.firstIndex(of: pageContentViewController)! == 1 {
+        } else if paginas.firstIndex(of: pageContentViewController) == 1 {
             segundaPagina()
         } else {
             terceiraPagina()
         }
-        self.pageControl.currentPage = paginas.firstIndex(of: pageContentViewController)!
     }
     
     func pageViewController(_ pageViewController: UIPageViewController,
