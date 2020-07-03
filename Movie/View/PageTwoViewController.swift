@@ -21,7 +21,7 @@ class PageTwoViewController: UIViewController {
         acessibilityComponents()
         configuraImagem()
         configuraLabelDescricao()
-        
+        configuraTamanhoLabel()
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,6 +39,21 @@ class PageTwoViewController: UIViewController {
     
     func configuraLabelDescricao(){
         labelDescricaoScroll.sizeToFit()
+    }
+    
+    func modelIdentifier() -> String {
+        if let simulatorModelIdentifier = ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] { return simulatorModelIdentifier }
+        var sysinfo = utsname()
+        uname(&sysinfo) // ignore return value
+        return String(bytes: Data(bytes: &sysinfo.machine, count: Int(_SYS_NAMELEN)), encoding: .ascii)!.trimmingCharacters(in: .controlCharacters)
+    }
+    
+    func configuraTamanhoLabel(){
+        let device = modelIdentifier()
+        if device == "iPhone8,4"{
+            labelTitulo.font = UIFont(name: "Roboto-Bold", size: 17)
+            labelDescricaoScroll.font = UIFont(name: "Roboto-Bold", size: 15)
+        }
     }
     
     func acessibilityComponents(){

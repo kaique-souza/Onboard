@@ -21,7 +21,7 @@ class PageThreeViewController: UIViewController {
         acessibilityComponets()
         configuraLabelDescricao()
         configuraImagem()
-        
+        configuraTamanhoLabel()
     }
     
     override func didReceiveMemoryWarning() {
@@ -38,6 +38,21 @@ class PageThreeViewController: UIViewController {
         imagemDetalhe.layer.cornerRadius = 10
         imagemDetalhe.layer.masksToBounds = true
         imagemDetalhe.layer.borderColor = UIColor.black.cgColor
+    }
+    
+    func modelIdentifier() -> String {
+        if let simulatorModelIdentifier = ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] { return simulatorModelIdentifier }
+        var sysinfo = utsname()
+        uname(&sysinfo) // ignore return value
+        return String(bytes: Data(bytes: &sysinfo.machine, count: Int(_SYS_NAMELEN)), encoding: .ascii)!.trimmingCharacters(in: .controlCharacters)
+    }
+    
+    func configuraTamanhoLabel(){
+        let device = modelIdentifier()
+        if device == "iPhone8,4"{
+            labelTitulo.font = UIFont(name: "Roboto-Bold", size: 17)
+            labelDescricaoDetalhe.font = UIFont(name: "Roboto-Bold", size: 15)
+        }
     }
     
     func acessibilityComponets(){

@@ -23,17 +23,12 @@ class PageOneViewController: UIViewController {
         acessibilityComponentes()
         configuraLabelDescricao()
         ConfiguraImagem()
+        configuraLabel()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
-    }
-    func modelIdentifier() -> String {
-        if let simulatorModelIdentifier = ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] { return simulatorModelIdentifier }
-        var sysinfo = utsname()
-        uname(&sysinfo) // ignore return value
-        return String(bytes: Data(bytes: &sysinfo.machine, count: Int(_SYS_NAMELEN)), encoding: .ascii)!.trimmingCharacters(in: .controlCharacters)
     }
     
     // MARK: - Metodos
@@ -42,10 +37,26 @@ class PageOneViewController: UIViewController {
         imagemSearch.layer.masksToBounds = true
         imagemSearch.layer.borderColor = UIColor.black.cgColor
         imagemSearch.layer.borderWidth = 1
+        print(modelIdentifier())
     }
     
     func configuraLabelDescricao(){
         labelDescricaoSearch.sizeToFit()
+    }
+    
+    func modelIdentifier() -> String {
+        if let simulatorModelIdentifier = ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] { return simulatorModelIdentifier }
+        var sysinfo = utsname()
+        uname(&sysinfo) // ignore return value
+        return String(bytes: Data(bytes: &sysinfo.machine, count: Int(_SYS_NAMELEN)), encoding: .ascii)!.trimmingCharacters(in: .controlCharacters)
+    }
+
+    func configuraLabel(){
+        let device = modelIdentifier()
+        if device == "iPhone8,4"{
+            labelTitulo.font = UIFont(name: "Roboto-Bold", size: 17)
+            labelDescricaoSearch.font = UIFont(name: "Roboto-Bold", size: 15)
+        }
     }
     
     func acessibilityComponentes(){
