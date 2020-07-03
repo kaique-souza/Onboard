@@ -286,7 +286,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+			shellScript = "#\"${PODS_ROOT}/SwiftLint/swiftlint\"\nif which swiftlint >/dev/null; then\n\nswiftlint\n\nelse \n\necho \"Swift lint nao esta instalado\"\n\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
