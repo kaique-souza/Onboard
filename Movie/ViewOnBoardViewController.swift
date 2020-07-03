@@ -14,7 +14,4 @@ class ViewOnBoardViewController: UIViewController {
         super.viewDidLoad()
 
     }
-
-
-
 }

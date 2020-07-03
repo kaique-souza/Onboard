@@ -9,17 +9,12 @@
 import UIKit
 
 class PageThreeViewController: UIViewController {
-
+    // MARK: - Life of cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
     }
-
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
     }
 
 }

@@ -13,29 +13,23 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         let storybord = UIStoryboard(name: "Main", bundle: nil)
         let controller = storybord.instantiateViewController(withIdentifier: "Page")
-        
-        if UserDefaults.standard.integer(forKey: "Primeiro_Acesso") >= 2{
+        if UserDefaults.standard.integer(forKey: "Primeiro_Acesso") >= 2 {
             let viewController = HomeViewController(nibName:"HomeViewController",bundle:nil)
             window?.rootViewController = viewController
             window?.makeKeyAndVisible()
             return true
         }
-        
         window?.rootViewController =  controller
         window?.makeKeyAndVisible()
-        
         return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
-      
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
@@ -43,7 +37,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
- 
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
@@ -57,11 +50,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: - Core Data stack
     lazy var persistentContainer: NSPersistentContainer = {
-  
         let container = NSPersistentContainer(name: "Movie")
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+        container.loadPersistentStores(completionHandler: { (_ storeDescription,error) in
             if let error = error as NSError? {
-     
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         })
@@ -83,4 +74,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
-

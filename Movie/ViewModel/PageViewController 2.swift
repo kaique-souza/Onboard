@@ -8,19 +8,17 @@
 
 import UIKit
 
-class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource{
-    
+class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     // MARK: - Atributos
     var primeiroAcesso = UserDefaults.standard.set(0, forKey: "Primeiro_Acesso")
-    
-    lazy var Paginas: [UIViewController] = {
+    lazy var paginas: [UIViewController] = {
         return [PageOneViewController(),
                 PageTwoViewController(),
                 PageThreeViewController()]
     }()
-    
     lazy var pageControl: UIPageControl = {
-        let pageControl = UIPageControl(frame: CGRect(x: 0,y: UIScreen.main.bounds.maxY - 70,width: UIScreen.main.bounds.width,height: 50))
+        let pageControl = UIPageControl(frame: CGRect(x: 0,y: UIScreen.main.bounds.maxY - 70,
+                                                      width: UIScreen.main.bounds.width,height: 50))
         pageControl.numberOfPages = Paginas.count
         pageControl.currentPage = 0
         pageControl.tintColor = UIColor.black
@@ -28,7 +26,6 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         pageControl.currentPageIndicatorTintColor = UIColor.black
         return pageControl
     }()
-    
     lazy var buttonProximo: UIButton = {
         let buttonProximo = UIButton(frame: CGRect(x: 220, y: 500, width: 70, height: 30))
         buttonProximo.setTitle("Proximo", for: .normal)
@@ -36,7 +33,6 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         buttonProximo.addTarget(self, action: #selector(actionbuttonProximo), for: .touchUpInside)
         return buttonProximo
     }()
-    
     lazy var buttonAnterior: UIButton = {
         let buttonAnterior = UIButton(frame: CGRect(x: 20, y: 500, width: 70, height: 30))
         buttonAnterior.setTitle("Anterior", for: .normal)
@@ -44,7 +40,6 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         buttonAnterior.addTarget(self, action: #selector(actionButtonAnterior), for: .touchUpInside)
         return buttonAnterior
     }()
-    
     lazy var buttonPular: UIButton = {
         let buttonPular = UIButton(frame: CGRect(x: 220, y: 50, width: 80, height: 30))
         buttonPular.setTitle("Pular", for: .normal)
@@ -58,91 +53,76 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         super.viewDidLoad()
         self.delegate = self
         self.dataSource =  self
-        
         if let primeiroViewController = Paginas.first {
             ordemPaginas(primeiroViewController)
         }
-        
         self.view.addSubview(pageControl)
         self.view.addSubview(buttonProximo)
         self.view.addSubview(buttonAnterior)
         self.view.addSubview(buttonPular)
     }
-    
     // MARK: - Metodos
-    func ordemPaginas(_ viewController: UIViewController){
+    func ordemPaginas(_ viewController: UIViewController) {
         setViewControllers([viewController],
                            direction: .forward,
                            animated: true,
                            completion: nil)
     }
 
-    @objc func actionbuttonProximo(){
+    @objc func actionbuttonProximo() {
         if pageControl.currentPage == 2 {
             pageControl.currentPage = 0
             ordemPaginas(Paginas[pageControl.currentPage])
-        }else{
+        } else {
             pageControl.currentPage += 1
             ordemPaginas(Paginas[pageControl.currentPage])
         }
     }
-    
-    @objc func actionButtonAnterior(){
-        if pageControl.currentPage == 0{
+    @objc func actionButtonAnterior() {
+        if pageControl.currentPage == 0 {
             pageControl.currentPage = 2
             ordemPaginas(Paginas[pageControl.currentPage])
-        }else{
+        } else {
             pageControl.currentPage -= 1
             ordemPaginas(Paginas[pageControl.currentPage])
         }
     }
-    
-    @objc func actionButtonPular(){
+    @objc func actionButtonPular() {
         let quantidade = UserDefaults.standard.integer(forKey: "Primero_Acesso") + 1
         UserDefaults.standard.set(quantidade, forKey: "Primero_Acesso")
-        
         print(UserDefaults.standard.integer(forKey: "Primero_Acesso"))
         let homeViewController =  HomeViewController()
         present(homeViewController, animated: true, completion: nil)
     }
 
-    func configuraLabel(){
-       
-    }
-    
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController,
+                            viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = Paginas.index(of: viewController) else {
             return nil
         }
-        
         let previousIndex = viewControllerIndex - 1
 
         guard previousIndex >= 0 else {
             return Paginas.last
         }
-        
         guard Paginas.count > previousIndex else {
             return nil
         }
-        
         return Paginas[previousIndex]
     }
-    
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController,
+                            viewControllerAfter viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = Paginas.index(of: viewController) else {
             return nil
         }
-        
         let nextIndex = viewControllerIndex + 1
         let orderedViewControllersCount = Paginas.count
         guard orderedViewControllersCount != nextIndex else {
             return Paginas.first
         }
-        
         guard orderedViewControllersCount > nextIndex else {
             return nil
         }
-        
         return Paginas[nextIndex]
     }
 

@@ -175,11 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6B1BCFCA24AB84610057D294 /* Build configuration list for PBXNativeTarget "Movie" */;
 			buildPhases = (
+				6B1D7D2324AF2DEC00CEBC79 /* SwiftLint */,
 				3DBA007FECA2CCD56653C0D5 /* [CP] Check Pods Manifest.lock */,
 				6B1BCFB124AB84600057D294 /* Sources */,
 				6B1BCFB224AB84600057D294 /* Frameworks */,
 				6B1BCFB324AB84600057D294 /* Resources */,
-				6B1D7D2324AF2DEC00CEBC79 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -286,7 +286,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse \necho \"Swift lint nao esta instalado\"\nfi\n";
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
