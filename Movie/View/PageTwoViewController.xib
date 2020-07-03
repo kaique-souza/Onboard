@@ -38,13 +38,13 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para visualizar mais filmes, basta deslizar a tela para cima, dessa forma ira obter mais titulos." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIa-Cm-XQr">
-                    <rect key="frame" x="20" y="462.5" width="374" height="74"/>
+                    <rect key="frame" x="20" y="462.5" width="374" height="73.5"/>
                     <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="21"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scroll" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QrI-JG-BYJ">
-                    <rect key="frame" x="174.5" y="418" width="65.5" height="29.5"/>
+                    <rect key="frame" x="175.5" y="418" width="63" height="29.5"/>
                     <fontDescription key="fontDescription" name="Roboto-Black" family="Roboto" pointSize="25"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>

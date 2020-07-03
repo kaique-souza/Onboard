@@ -66,7 +66,7 @@ class PageViewController: UIPageViewController {
         self.delegate = self
         self.dataSource =  self
         if let primeiroViewController = paginas.first {
-            ordemPaginas(primeiroViewController)
+            setPaginas(primeiroViewController)
         }
         acessibilityComponents()
         configuraPageControl()
@@ -77,7 +77,7 @@ class PageViewController: UIPageViewController {
         visualizacaoButtons(iniciar: false)
     }
     // MARK: - Metodos
-    func ordemPaginas(_ viewController: UIViewController) {
+    func setPaginas(_ viewController: UIViewController) {
         setViewControllers([viewController],
                            direction: .forward,
                            animated: true,
@@ -179,19 +179,19 @@ class PageViewController: UIPageViewController {
             visualizacaoButtons(iniciar: true)
         } else {
             pageControl.currentPage += 1
-            ordemPaginas(paginas[pageControl.currentPage])
+            setPaginas(paginas[pageControl.currentPage])
         }
     }
     @objc func actionButtonAnterior() {
         if pageControl.currentPage == 0 {
-            ordemPaginas(paginas[pageControl.currentPage])
+            setPaginas(paginas[pageControl.currentPage])
         } else {
             pageControl.currentPage -= 1
-            ordemPaginas(paginas[pageControl.currentPage])
+            setPaginas(paginas[pageControl.currentPage])
         }
     }
     @objc func actionButtonPular() {
-        ordemPaginas(paginas[2])
+        setPaginas(paginas[2])
         visualizacaoButtons(iniciar: true)
     }
     func visualizacaoButtons(iniciar: Bool) {
