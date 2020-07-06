@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         let storybord = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storybord.instantiateViewController(withIdentifier: "Page")
-        if UserDefaults.standard.integer(forKey: "Primeiro_Acesso") >= 2 {
+        let controller = storybord.instantiateViewController(withIdentifier: "PageViewController")
+        if UserDefaults.standard.integer(forKey: Strings.controleTutorial) >= 2 {
             let viewController = HomeViewController(nibName:"HomeViewController",bundle:nil)
             window?.rootViewController = viewController
             window?.makeKeyAndVisible()

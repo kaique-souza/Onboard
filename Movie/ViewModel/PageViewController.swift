@@ -11,7 +11,7 @@ import UIKit
 class PageViewController: UIPageViewController {
     // MARK: - Atributos
     var bottomSafeAreaHeight: CGFloat = 15
-    var primeiroAcesso = UserDefaults.standard.integer(forKey: "Primeiro_Acesso") //
+    var primeiroAcesso = UserDefaults.standard.integer(forKey: Strings.controleTutorial)
     lazy var paginas: [UIViewController] = {
         return [PageOneViewController(),
                 PageTwoViewController(),
@@ -31,7 +31,7 @@ class PageViewController: UIPageViewController {
         let buttonProximo = UIButton()
         buttonProximo.setTitle("Proximo", for: .normal)
         buttonProximo.setTitleColor(UIColor.red, for: .normal)
-        buttonProximo.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 19)
+        buttonProximo.titleLabel?.font = UIFont(name: Strings.FonteRoboto, size: 19)
         buttonProximo.addTarget(self, action: #selector(actionbuttonProximo), for: .touchUpInside)
         return buttonProximo
     }()
@@ -41,7 +41,7 @@ class PageViewController: UIPageViewController {
         buttonAnterior.isHidden = true
         buttonAnterior.setTitle("Anterior", for: .normal)
         buttonAnterior.setTitleColor(UIColor.red, for: .normal)
-        buttonAnterior.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 19)
+        buttonAnterior.titleLabel?.font = UIFont(name: Strings.FonteRoboto, size: 19)
         buttonAnterior.addTarget(self, action: #selector(actionButtonAnterior), for: .touchUpInside)
         return buttonAnterior
     }()
@@ -49,7 +49,7 @@ class PageViewController: UIPageViewController {
     lazy var buttonPular: UIButton = {
         let buttonPular = UIButton()
         buttonPular.setTitle("Pular", for: .normal)
-        buttonPular.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 19)
+        buttonPular.titleLabel?.font = UIFont(name: Strings.FonteRoboto, size: 19)
         buttonPular.setTitleColor(UIColor.red, for: .normal)
         buttonPular.addTarget(self, action: #selector(actionButtonPular), for: .touchUpInside)
         return buttonPular
@@ -60,7 +60,7 @@ class PageViewController: UIPageViewController {
         buttonIniciar.isHidden = true
         buttonIniciar.backgroundColor = UIColor.red
         buttonIniciar.setTitle("Iniciar", for: .normal)
-        buttonIniciar.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 19)
+        buttonIniciar.titleLabel?.font = UIFont(name: Strings.FonteRoboto, size: 19)
         buttonIniciar.setTitleColor(UIColor.white, for: .normal)
         buttonIniciar.addTarget(self, action: #selector(iniciarApp), for: .touchUpInside)
        return buttonIniciar
@@ -181,8 +181,8 @@ class PageViewController: UIPageViewController {
     }
     
     @objc func iniciarApp() {
-        let quantidade = UserDefaults.standard.integer(forKey: "Primeiro_Acesso") + 1
-        UserDefaults.standard.set(quantidade, forKey: "Primeiro_Acesso")
+        let quantidade = UserDefaults.standard.integer(forKey: Strings.controleTutorial) + 1
+        UserDefaults.standard.set(quantidade, forKey: Strings.controleTutorial)
         let homeViewController =  HomeViewController()
         present(homeViewController, animated: true, completion: nil)
     }
@@ -224,7 +224,6 @@ class PageViewController: UIPageViewController {
         buttonAnterior.isHidden = true
         buttonProximo.isHidden = true
         buttonPular.isHidden = true
-        
     }
     
     func acessibilityComponents() {
@@ -242,7 +241,7 @@ extension PageViewController: UIPageViewControllerDelegate, UIPageViewController
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         
         guard let pageContentViewController = pageViewController.viewControllers?[0] else { return }
-        
+    
         if paginas.firstIndex(of: pageContentViewController) == 0 {
             primeiraPagina()
         } else if paginas.firstIndex(of: pageContentViewController) == 1 {
@@ -251,6 +250,8 @@ extension PageViewController: UIPageViewControllerDelegate, UIPageViewController
             terceiraPagina()
         }
     }
+    
+    
     
     func pageViewController(_ pageViewController: UIPageViewController,
                             viewControllerBefore viewController: UIViewController) -> UIViewController? {

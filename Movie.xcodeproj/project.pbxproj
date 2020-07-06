@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B0D273424B3476A0082EC1C /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D273324B3476A0082EC1C /* Strings.swift */; };
 		6B1BCFB924AB84600057D294 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1BCFB824AB84600057D294 /* AppDelegate.swift */; };
 		6B1BCFBE24AB84600057D294 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B1BCFBC24AB84600057D294 /* Main.storyboard */; };
 		6B1BCFC124AB84600057D294 /* Movie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6B1BCFBF24AB84600057D294 /* Movie.xcdatamodeld */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		54E22DC2E185BDA9D5C8E427 /* Pods_Movie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Movie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B0D273324B3476A0082EC1C /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		6B1BCFB524AB84600057D294 /* Movie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B1BCFB824AB84600057D294 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B1BCFBD24AB84600057D294 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				6B1BCFB824AB84600057D294 /* AppDelegate.swift */,
+				6B0D273324B3476A0082EC1C /* Strings.swift */,
 				6BAB03B124AC8C48003F0112 /* ViewModel */,
 				6BAB03B024AC8C1F003F0112 /* View */,
 				6B56F30924ACDBE500A17C8E /* Assets */,
@@ -297,6 +300,7 @@
 			files = (
 				6BAB03AE24ABA7E4003F0112 /* PageThreeViewController.swift in Sources */,
 				6B1BCFC124AB84600057D294 /* Movie.xcdatamodeld in Sources */,
+				6B0D273424B3476A0082EC1C /* Strings.swift in Sources */,
 				6BAB03AA24ABA7CA003F0112 /* PageTwoViewController.swift in Sources */,
 				6BAB03A624ABA7AC003F0112 /* PageOneViewController.swift in Sources */,
 				6B1BCFB924AB84600057D294 /* AppDelegate.swift in Sources */,

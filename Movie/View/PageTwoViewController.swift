@@ -48,8 +48,8 @@ class PageTwoViewController: UIViewController {
     func configuraTamanhoLabel() {
         let device = modelIdentifier()
         if device == "iPhone8,4"{
-            labelTitulo.font = UIFont(name: "Roboto-Bold", size: 17)
-            labelDescricaoScroll.font = UIFont(name: "Roboto-Bold", size: 15)
+            labelTitulo.font = UIFont(name: Strings.FonteRoboto, size: 17)
+            labelDescricaoScroll.font = UIFont(name: Strings.FonteRoboto, size: 15)
         }
     }
     func acessibilityComponents() {
